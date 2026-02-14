@@ -32,6 +32,7 @@ function createPromise(state, delay) {
 }
 
 function onResolve(delay) {
+  console.log(`✅ Fulfilled promise in ${delay}ms`);
   iziToast.success({
     title: 'OK',
     message: `✅ Fulfilled promise in ${delay}ms`,
@@ -43,6 +44,7 @@ function onResolve(delay) {
   });
 }
 function onReject(delay) {
+  console.log(`❌ Rejected promise in ${delay}ms`);
   iziToast.error({
     title: 'Error',
     message: `❌ Rejected promise in ${delay}ms`,
